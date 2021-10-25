@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.novayre.jidoka.robot</groupId>
+    <artifactId>jidoka-robot-parent</artifactId>
+    <version>7.5.0</version>
+  </parent>
+  <groupId>com.novayre.jidoka.robot.test</groupId>
+  <artifactId>csvtoexcel</artifactId>
+  <version>0.0.1</version>
+  <name>robot-blank-template</name>
+  <dependencies>
+    <dependency>
+      <groupId>com.novayre.jidoka.module</groupId>
+      <artifactId>jidoka-browser-api</artifactId>
+      <version>${jidoka.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>4.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>3.15</version>
+    </dependency>
+    <dependency>
+      <groupId>com.opencsv</groupId>
+      <artifactId>opencsv</artifactId>
+      <version>5.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.novayre.jidoka.module</groupId>
+      <artifactId>jidoka-msoutlook-api</artifactId>
+      <version>${jidoka.version}</version>
+    </dependency>
+
+  </dependencies>
+  <profiles>
+    <profile>
+      <id>jidoka-repo</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <distributionManagement>
+        <repository>
+          <id>jidoka</id>
+          <url>https://telusrpadev.appiancloud.com/rpa/repo/</url>
+        </repository>
+      </distributionManagement>
+      <repositories>
+        <repository>
+          <releases />
+          <snapshots />
+          <id>jidoka</id>
+          <url>https://telusrpadev.appiancloud.com/rpa/repo/</url>
+        </repository>
+        <repository>
+          <id>AsposeJavaAPI</id>
+          <name>Aspose Java API</name>
+          <url>https://repository.aspose.com/repo/</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <releases />
+          <snapshots />
+          <id>jidoka</id>
+          <url>https://telusrpadev.appiancloud.com/rpa/repo/</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+</project>
